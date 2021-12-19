@@ -1,0 +1,13 @@
+public class TestClass2 {
+	public static void main(String[] args) {
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\om\\Downloads\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://www.facebook.com/signup");
+		
+		PomDemo pom = new PomDemo(driver);
+		pom.enterFirstName("Onkar");
+		pom.enterLastName("Kulkarni");
+		pom.clickSignUp();
+	}
+}
